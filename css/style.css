@@ -12,43 +12,34 @@
 /*--------- Styles for tags ---------*/
 
 body {
-	background-color: #333333; 
-	color: #ccc;
-	
 }
 
 input[type="text"],input[type="password"],input[type="email"]{
-	padding: 12px;
 	border: none;
 	border-radius: 4px;
-	height: 24px;
 	line-height: 24px;
-	color: #2c3e50;
 }
 input[type="text"]:active,input[type="text"]:focus,input[type="password"]:active,input[type="password"]:focus,input[type="email"]:active,input[type="email"]:focus{
 	outline: none;
-	border: 2px solid #c7cdd8;
-	padding: 10px;
-	
+	border-width: 2px;
+	border-style: solid;
 	
 }
 
 a{
 	text-decoration: none;
-	color: #3498db;
 }
+
 .visually-hidden{
 	display: none;
 }
 
 input[type="checkbox"] {
-	background-color: #c7cdd8;
 	-moz-appearance: none;
 	-webkit-appearance: none;
 	-o-appearance: none;
-	padding: 15px;
-	background-color: #3498db;
-	border: 2px solid #bdc3c7;
+	border-width: 2px;
+	border-style: solid;
 	
 }
 
@@ -56,19 +47,17 @@ input[type="checkbox"]:focus{
 	background: url("/themes/brightnflat/images/checkbox.png");
 	outline: none;
 	background-repeat: no-repeat;
-	background-color:#2980b9; 
+	
 }
 input[type="checkbox"]:hover{
-	border-color:  #27ae60;
+	
 }
 
 .button{
-	padding: 12px;
-	color: #fff;
 	font-weight: bold;
-	background: rgb(185, 150, 190);
-	border: 0px;
-	border-bottom:2px solid rgb(139, 91, 146);
+	border: none;
+	border-bottom-width:2px; 
+	border-bottom-style: solid;
 }
 
 .button:active{
@@ -76,13 +65,9 @@ input[type="checkbox"]:hover{
 }
 
 .button:hover{
-	color: rgb(139, 91, 146);
 }
 
 .meta{
-	background: #333;
-	padding: 10px;
-	color: #ccc;
 }
 
 
@@ -90,17 +75,23 @@ input[type="checkbox"]:hover{
 
 
 #header{
-	background: #f4a62a;
-	border-bottom: 2px solid #00a000;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
 }
 
+#site-name a{
+        text-decoration: none;
+        font-family: Bellota;
+        font-style: italic;
+        font-size: 1.8em;
 
+}
+#site-slogan {
+        font-size: 1.3em;
+        font-family: Bellota;
+}
 
 #header-layout{
-	width: 100%;
-	background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.12);
-
 }
 
 #header-layout tr td{
@@ -110,29 +101,19 @@ input[type="checkbox"]:hover{
 
 
 #name-and-slogan {
-	margin-top: 30px;
 }
 
 #secondary-menu {
-	position: relative;
-	top: -400px;
-	float: right;
-	right: 5%;
 
 }
 
 #secondary-menu .first a{
-	background-color: rgb(107, 195, 228);
-	border-bottom-color: rgb(139, 91, 146);
 	font-size: 1em;
-	height:20px;
 	line-height: 20px;
 
 }
 #secondary-menu .last a{
 	font-size: 1em;
-	background: #c0392b;
-	height:20px;
 
 }
 
@@ -144,7 +125,6 @@ input[type="checkbox"]:hover{
 	text-decoration: none;
 	font-family: Bellota;
 	font-style: italic;
-	color: #fff;
 	font-size: 1.8em;
 
 }
@@ -154,11 +134,6 @@ input[type="checkbox"]:hover{
 }
 
 .navigation {
-	
-	float:left;
-	position:relative;
-	left:-40px;
-	margin-bottom:25px; 
 	font-family: Mohave;
 }
 .navigation ul{
@@ -166,36 +141,28 @@ input[type="checkbox"]:hover{
 	list-style: none;
 }
 .navigation ul li{
-	float: left;
-	margin-left: 20px;
 	
 }
 .nav-block {
-	height: 100%;
-	margin: 0px auto;
 }
+
 .navigation ul li a{
 	text-decoration: none;
-	padding: 15%;
-	background: #333;
 	border-radius: 5px;
 	font-size: 1.5em;
 	transition: 0.5s;
-	border-bottom: 2px solid #000;
-	color: #fff;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
 }
 
 .navigation ul li a:hover{
-	color: #e74c3c;
 }
 
 .navigation ul li a.active{
-	background-color: #34495e;
 	
 }
 
 .navigation ul li a:active{
-	background-color: #34495e;
 }
 
 
@@ -205,80 +172,53 @@ input[type="checkbox"]:hover{
 
 
 #main-wrapper {
-	min-height: 400px;
-	padding: 10px;
 
 }
 
 #main{
-	height: 100%;
+
 }
 
 #content{
-	position: absolute;
-	
-	
-	background: #ecf0f1;
-	
-	padding: 20px;
-	color: #333;
-	
+
 }
 
 .node-article{
-	border-bottom: 2px solid rgb(107, 195, 228);
-	padding-bottom:10px; 
+
 }
 
 #page-title{
-	color: #e74c3c;
 }
 
 #sidebar-first{
-	position: relative;
-	top: 0px;
-	width: 20%;
-	float: left;
+
 }
 
 #sidebar-second{
-	position: relative;
-	top: 0px;
-	width: 20%;
-	float: right;
-	right: 0px;
+
 }
 .region-sidebar-first .block,.region-sidebar-second .block{
-	background: #2c3e50;
-	padding: 10px;
-	margin-bottom:  10px;
 }
 .region-sidebar-first .block h2,.region-sidebar-second .block h2{
-	color: #1abc9c;
-	border-bottom: 2px solid #333;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
 }
 
 
 .main-with-sidebar-first{
-	margin-left: 22.5%;
-	width: 70%;
+
 }
 
 .main-without-sidebars {
-	
-	width: 95%;
+
 }
 .main-with-sidebar-second{
-	margin-left: 0px;
-	width: 70%;
 
 
 }
 
 .main-with-sidebars{
-	width: 50%;
-	
-	margin-left: 22.5%;
+
 }
 
 
@@ -287,23 +227,13 @@ input[type="checkbox"]:hover{
 
 
 #footer-wrapper {
-	margin-top: 20px;
-	background: #e74c3c;
-	position: relative;
-	height: 100%;
-	padding-top:40px; 
-	border-top: 2px solid #c74c3c;
+	border-top-width: 2px;
+	border-bottom-style: solid;
 }
 
 footer{
-	background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.12);
     
-    margin-top: 20px;
 }
 #block-brightnflat-footer h2{
 	display: none;
 }
-
-
-
