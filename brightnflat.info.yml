@@ -7,6 +7,8 @@ core: 8.x
 stylesheets:
   all:
     - css/style.css
+    - css/layout.css
+    - css/colors.css
 
 regions:
   header: Header
@@ -18,9 +20,6 @@ regions:
   content: Content
   sidebar_first: 'Sidebar first'
   sidebar_second: 'Sidebar second'
-  triptych_first: 'Triptych first'
-  triptych_middle: 'Triptych middle'
-  triptych_last: 'Triptych last'
   footer_firstcolumn: 'Footer first column'
   footer_secondcolumn: 'Footer second column'
   footer_thirdcolumn: 'Footer third column'
