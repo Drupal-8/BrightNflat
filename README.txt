@@ -40,8 +40,18 @@ Theme has been designed for small promo-sites or sites with static pages. In the
 
 
 Authored
+========
+
+Theme autgired by RAZVOR(Razvorotnev Ivan)
+Email: Irazvor@gmail.com
+
+Credits
 =======
 
-Theme autgired by RAZVOR
 Used code and comments from Bartik https://drupal.org/project/bartik
+
+Used fonts:
+  Bellota http://www.fontsquirrel.com/fonts/bellota
+  Circula http://www.dafont.com/circula.font
+  Mohave http://absolutfoundry.com/portfolio_item/mohave-typefaces/
 
