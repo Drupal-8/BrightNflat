@@ -1,0 +1,163 @@
+/*
+	BrightNflat css file for theme colors.
+*/
+
+/*--------- Styles for tags ---------*/
+
+body{
+	background-color: #333333; 
+	color: #ccc;
+	
+}
+
+input[type="text"],input[type="password"],input[type="email"]{
+	color: #2c3e50;
+}
+input[type="text"]:active,input[type="text"]:focus,input[type="password"]:active,input[type="password"]:focus,input[type="email"]:active,input[type="email"]:focus{
+	border-color #c7cdd8;
+}
+
+a{
+	color: #3498db;
+}
+
+input[type="checkbox"] {
+	background-color: #c7cdd8;
+	background-color: #3498db;
+	border-color: #bdc3c7;
+	
+}
+
+input[type="checkbox"]:focus{
+	background-color:#2980b9; 
+}
+input[type="checkbox"]:hover{
+	border-color:  #27ae60;
+}
+
+.button{
+	color: #fff;
+	background: rgb(185, 150, 190);
+	border-bottom-color: rgb(139, 91, 146);
+}
+
+.button:hover{
+	color: rgb(139, 91, 146);
+}
+
+.meta{
+	background: #333;
+	color: #ccc;
+}
+
+
+/*--------- Header ---------*/
+
+
+#header{
+	background: #f4a62a;
+	border-bottom-color: #00a000;
+}
+
+#site-name a{
+        color: #fff;
+
+
+}
+
+#header-layout{
+	background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.12);
+
+}
+
+
+#secondary-menu .first a{
+	background-color: rgb(107, 195, 228);
+	border-bottom-color: rgb(139, 91, 146);
+
+}
+
+#secondary-menu .last a{
+
+	background: #c0392b;
+
+}
+
+.navigation ul{
+	
+	list-style: none;
+}
+.navigation ul li{
+	float: left;
+	margin-left: 20px;
+	
+}
+.nav-block {
+	height: 100%;
+	margin: 0px auto;
+}
+.navigation ul li a{
+	background: #333;
+	border-bottom-color: #000;
+	color: #fff;
+}
+
+.navigation ul li a:hover{
+	color: #e74c3c;
+}
+
+.navigation ul li a.active{
+	background-color: #34495e;
+	
+}
+
+.navigation ul li a:active{
+	background-color: #34495e;
+}
+
+
+
+/*---------- Main wrapper ---------*/
+
+
+
+#content{
+	background: #ecf0f1;
+	color: #333;
+	
+}
+
+.node-article{
+	border-bottom-color: rgb(107, 195, 228);
+}
+
+#page-title{
+	color: #e74c3c;
+}
+
+
+.region-sidebar-first .block,.region-sidebar-second .block{
+	background: #2c3e50;
+}
+.region-sidebar-first .block h2,.region-sidebar-second .block h2{
+	color: #1abc9c;
+	border-bottom-color: #333;
+}
+
+
+
+/*---------- Footer ----------*/
+
+
+
+#footer-wrapper {
+	background: #e74c3c;
+	border-top-color:  #c74c3c;
+}
+
+footer{
+	background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.12);
+}
+
