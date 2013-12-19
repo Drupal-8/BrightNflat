@@ -61,11 +61,9 @@
               {% if site_name %}
                 {% if title %}
 
-                  <div id="site-name"{% if hide_site_name %} class="visually-hidden"{% endif %}>
-                    <strong>
-                      <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home"><span>{{ site_name }}</span></a>
-                    </strong>
-                  </div> <!-- /#site-name -->
+                  <h1 id="site-name"{% if hide_site_name %} class="visually-hidden" {% endif %}>
+                    <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home"><span>{{ site_name }}</span></a>
+                  </h1><!-- /#site-name -->
                 
 
                 {% else %}
