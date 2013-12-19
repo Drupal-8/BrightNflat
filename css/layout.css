@@ -1,0 +1,170 @@
+/*--------- Styles for tags ---------*/
+
+body {
+	padding: 0px;
+}
+
+input[type="text"],input[type="password"],input[type="email"]{
+	padding: 12px;
+	height: 24px;
+}
+
+input[type="text"]:active,input[type="text"]:focus,input[type="password"]:active,input[type="password"]:focus,input[type="email"]:active,input[type="email"]:focus{
+	padding: 10px;
+}
+
+.button{
+	padding: 12px;
+}
+
+.meta{
+	padding: 10px;
+}
+
+
+/*--------- Header ---------*/
+
+#header-layout{
+	width: 100%;
+}
+
+
+
+#name-and-slogan {
+	margin-top: 30px;
+}
+
+#secondary-menu {
+	position: relative;
+	top: -400px;
+	float: right;
+	right: 5%;
+
+}
+
+#secondary-menu .first a{
+	height:20px;
+
+}
+
+#secondary-menu .last a{
+	height:20px;
+
+}
+
+.navigation {
+	
+	float:left;
+	position:relative;
+	left:-40px;
+	margin-bottom:25px; 
+}
+
+.navigation ul li{
+	float: left;
+	margin-left: 20px;
+	
+}
+
+.nav-block {
+	height: 100%;
+	margin: 0px auto;
+}
+
+.navigation ul li a{
+	padding: 15%;
+}
+
+
+
+/*---------- Main wrapper ---------*/
+
+
+
+#main-wrapper {
+	min-height: 400px;
+	padding: 10px;
+
+}
+
+#main{
+	height: 100%;
+}
+
+#content{
+	position: absolute;
+	padding: 20px;
+}
+
+.node-article{
+	padding-bottom:10px; 
+}
+
+#page-title{
+}
+
+#sidebar-first{
+	position: relative;
+	top: 0px;
+	width: 20%;
+	float: left;
+}
+
+#sidebar-second{
+	position: relative;
+	top: 0px;
+	width: 20%;
+	float: right;
+	right: 0px;
+}
+.region-sidebar-first .block,.region-sidebar-second .block{
+	padding: 10px;
+	margin-bottom:  10px;
+}
+.region-sidebar-first .block h2,.region-sidebar-second .block h2{
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+}
+
+
+.main-with-sidebar-first{
+	margin-left: 22.5%;
+	width: 70%;
+}
+
+.main-without-sidebars {
+	
+	width: 95%;
+}
+.main-with-sidebar-second{
+	margin-left: 0px;
+	width: 70%;
+
+
+}
+
+.main-with-sidebars{
+	width: 50%;
+	
+	margin-left: 22.5%;
+}
+
+
+/*---------- Footer ----------*/
+
+
+
+#footer-wrapper {
+	margin-top: 20px;
+	position: relative;
+	height: 100%;
+	padding-top:40px; 
+}
+
+footer{
+    margin-top: 20px;
+}
+
+
+
+
