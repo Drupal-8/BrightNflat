@@ -1,0 +1,52 @@
+{#
+/**
+ * @file
+ * BrightNflat's theme implementation to display a node.
+ *
+ * Available variables:
+ * - node: Full node entity.
+ *   - id: The node ID
+ * - label: The title of the node.
+ * - content: All node items. 
+ * - node_url: Direct URL of the current node.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - node: The current template type (also known as a "theming hook").
+ *   - node-[type]: The current node type. For example, if the node is a
+ *     "Article" it would result in "node-article". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *    
+ *
+ * @ingroup themeable
+ */
+#}
+
+<article id="node-{{ node.id }}" class="{{ attributes.class}}" {{ attributes }} role="article">
+
+  <header>
+    {{ title_prefix }}
+    {% if not page %}
+      <h2{{ title_attributes }}>
+        <a href="{{ node_url }}">{{ label }}</a>
+      </h2>
+    {% endif %}
+    {{ title_suffix }}
+
+    {% if display_submitted %}
+      <div class="meta submitted">
+        {{ user_picture }}
+        {{ submitted }}
+      </div>
+    {% endif %}
+  </header>
+
+  <div class="content nodecontent"{{ content_attributes }}>
+    
+    {% hide(content.links) %}
+    {{ content }}
+  </div>
+
+  
+
+</article>

@@ -1,0 +1,208 @@
+{#
+ /**
+ *@file
+ *The doctype is twig. Tags head,body are not in this template 
+ *
+ * General utility variables:
+ * - base_path: The base URL path of the Drupal installation. Will usually be
+ *   "/" unless you have installed Drupal in a sub-directory.
+ *
+ * Site identity:
+ * - front_page: The URL of the front page. Use this instead of base_path when
+ *   linking to the front page. This includes the language domain or prefix.
+ * - logo: The url of the logo image, as defined in theme settings.
+ * - site_name: The name of the site. This is empty when displaying the site
+ *   name has been disabled in the theme settings.
+ * - site_slogan: The slogan of the site. This is empty when displaying the site
+ *   slogan has been disabled in theme settings.
+ * - hide_site_name: A flag indicating if the site name has been toggled off on
+ *   the theme settings page. If hidden, the "visually-hidden" class is added
+ *   to make the site name visually hidden, but still accessible.
+ * - hide_site_slogan: A flag indicating if the site slogan has been toggled off
+ *   on the theme settings page. If hidden, the "visually-hidden" class is
+ *   added to make the site slogan visually hidden, but still accessible.
+ *
+ *
+ * Navigation:
+ * - main_menu: The Main menu links for the site, if they have been configured.
+ * - secondary_menu: The Secondary menu links for the site, if they have been configured 
+ *
+ * Regions:
+ * - page.help: Dynamic help text, mostly for admin pages.
+ * - page.content: The main content of the current page.
+ * - page.sidebar_first: Items for the first sidebar.
+ * - page.sidebar_second: Items for the second sidebar.
+ * - page.header: Items for the header region.
+ * - page.footer: Items for the footer region.
+ *
+ *Credits:
+ *Using code way and class names from Bartik:
+ * https://drupal.org/project/bartik
+ *Using description from Mayo theme:
+ * https://drupal.org/project/mayo
+ */
+#}
+
+<div id ="page"> 
+  <header id="header" class="clearfix">
+      <table id="header-layout">
+
+        <tr><td>
+            {% if logo %}
+              <img src="{{ logo }}" alt="{{ 'Home'|t }}" />
+            {% endif %}
+        </td></tr>
+
+        <tr><td>
+
+          {% if site_name or site_slogan %}
+            <div id="name-and-slogan"{% if hide_site_name and hide_site_slogan %} class="visually-hidden"{% endif %}>
+
+              {% if site_name %}
+                {% if title %}
+
+                  <div id="site-name"{% if hide_site_name %} class="visually-hidden"{% endif %}>
+                    <strong>
+                      <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home"><span>{{ site_name }}</span></a>
+                    </strong>
+                  </div> <!-- /#site-name -->
+                
+
+                {% else %}
+
+                  <h1 id="site-name"{% if hide_site_name %} class="visually-hidden" {% endif %}>
+                    <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home"><span>{{ site_name }}</span></a>
+                  </h1>
+
+                {% endif %}
+              {% endif %}
+
+              {% if site_slogan %}
+
+                <div id="site-slogan"{% if hide_site_slogan %} class="visually-hidden"{% endif %}>
+
+                  {{ site_slogan }}
+
+                </div>
+
+              {% endif %}
+
+            </div>
+            
+          {% endif %}
+
+        </td></tr>
+
+      </table>  <!-- /#header-layout -->
+
+
+        {% if main_menu %}
+          <nav id ="main-menu" class="navigation" role="navigation">
+            {{ main_menu }}
+          </nav>  <!-- /#main-menu navigation -->
+        {% endif %}
+
+        {% if secondary_menu %}
+          <nav id="secondary-menu" class="navigation" role="navigation">
+            {{ secondary_menu }}
+          </nav> <!-- /#secondary-menu navigation  -->
+        {% endif %}
+      
+
+  </header> 
+
+  {% if messages %}
+    <div id="messages"><div >
+      {{ messages }}
+    </div></div> 
+  {% endif %}
+
+  {% if page.featured %}
+    <aside id="featured"><div>
+      {{ page.featured }}
+    </div></aside>
+  {% endif %}
+
+  <div id="main-wrapper" class="clearfix">
+    <div id="main">
+
+
+
+      <main id="content" class="clearfix {% if page.sidebar_second and page.sidebar_first %}
+  main-with-sidebars
+{% else %}
+  {% if page.sidebar_second or page.sidebar_first %} 
+    {% if page.sidebar_first %}
+      main-with-sidebar-first
+    {% else %}
+      main-with-sidebar-second
+    {% endif %} 
+  {% else %}
+    main-without-sidebars 
+  {% endif %}
+{% endif %}  " role="main">
+        <section>
+
+          {{ title_prefix }}
+            {% if title %}
+              <h1 class="title" id="page-title">
+                {{ title }}
+              </h1>
+            {% endif %}
+          {{ title_suffix }}
+            {% if tabs %}
+              <nav class="tabs" role="navigation">
+                {{ tabs }}
+              </nav>
+            {% endif %}
+          {{ page.help }}
+            {% if action_links %}
+              <ul class="action-links">
+                {{ action_links }}
+              </ul>
+            {% endif %}
+
+          {{ page.content }}
+
+        </section>
+      </main> 
+
+    {% if page.sidebar_first %}
+      <div id="sidebar-first" >
+        <aside>
+          {{ page.sidebar_first }}
+        </aside>
+      </div>
+    {% endif %}
+
+    {% if page.sidebar_second %}
+      <div id="sidebar-second" >
+        <aside>
+          {{ page.sidebar_second }}
+        </aside>
+      </div>
+    {% endif %}
+
+    </div>
+  </div> <!-- /#main -->
+
+  <div id="footer-wrapper"><footer>
+
+    {% if page.footer_firstcolumn or page.footer_secondcolumn or page.footer_thirdcolumn or page.footer_fourthcolumn %}
+      <div id="footer-columns" class="clearfix">
+        {{ page.footer_firstcolumn }}
+        {{ page.footer_secondcolumn }}
+        {{ page.footer_thirdcolumn }}
+        {{ page.footer_fourthcolumn }}
+      </div>
+    {% endif %}
+
+    {% if page.footer %}
+      <div id="footer" role="contentinfo" >
+        {{ page.footer }}
+      </div> 
+   {% endif %}
+
+  </footer></div>  
+
+</div>
